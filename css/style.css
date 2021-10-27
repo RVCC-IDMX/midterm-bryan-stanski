@@ -142,3 +142,42 @@ figcaption {
 
 
 /* End of Phone Style Section */
+
+
+
+/* Tablet Layout Section */
+
+@media screen and (min-width : 768px) {
+
+    .signature {
+        text-align : center;
+    }
+
+    h1 {
+        font-size : 50px;
+    }
+
+    #cover {
+        max-width : 30%;
+    }
+
+    /* Grid layout code from https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas */
+    aside {
+        display : grid;
+        grid-template-areas : "head head head"
+                              "sub  sub  sub";
+    }
+
+    aside > h2 {
+        grid-area : head;
+    }
+
+    aside > .submission {
+        grid-area : auto;
+        text-align : center;
+    }
+
+    
+}
+
+/* End of Table Layout Section */
