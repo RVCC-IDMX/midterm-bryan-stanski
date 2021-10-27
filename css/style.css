@@ -128,6 +128,7 @@ span:lang(fr), :lang(is), :lang(it), :lang(id) {
     font-size : large;
     padding : 20px;
     border : solid 1px black;
+    margin : 5px;
 }
 
 .signature {
@@ -181,3 +182,62 @@ figcaption {
 }
 
 /* End of Table Layout Section */
+
+
+
+/* Desktop Layout Section */
+
+@media screen and (min-width : 1024px) {
+    
+    /* Grid layout code from https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas */
+    
+    body {
+        display : grid;
+        grid-template-columns : 70% auto;
+        grid-template-rows : auto;
+        grid-template-areas : "head head"
+                              "nav  nav"
+                              "main aside"
+                              "foot foot";
+        grid-gap : 0.2rem;
+    }
+
+    body > header {
+        grid-area : head;
+    }
+
+    body > nav {
+        grid-area : nav;
+    }
+
+    body > main {
+        grid-area : main;
+    }
+
+    body > aside {
+        grid-area : aside;
+        display : inline;
+    }
+
+    body > footer {
+        grid-area : foot;
+    }
+
+    .submission {
+        margin-bottom : 15px;
+    }
+
+}
+
+/* Desktop Layout For Expanding Margins */
+
+@media screen and (min-width : 1200px) {
+    
+    body {
+        max-width : 1200px;
+        margin : 0 auto;
+    }
+    
+}
+
+/* End of Desktop Layout Section */
